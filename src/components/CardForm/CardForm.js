@@ -11,6 +11,8 @@ const CardForm = props => {
   const [title, setTitle] = useState('');
   const handleSubmit = e => {
     e.preventDefault();
+    // dlaczego w payload musialem powiedziec, ze columnId to props.columnId
+    // z props nie chcialo dzialac
     dispatch({type:'ADD_CARD', payload: {title, columnId}})
     setTitle('');
   };
