@@ -1,9 +1,9 @@
 import styles from './SearchForm.module.scss';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { searchFor } from '../../redux/store';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button'
-import { searchFor } from '../../redux/store';
 
 const SearchForm = () => {
 

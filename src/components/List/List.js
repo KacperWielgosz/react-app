@@ -1,9 +1,8 @@
 import styles from './List.module.scss';
-import ColumnForm from '../ColumnForm/ColumnForm';
-import Column from '../Column/Column';
 import { useSelector } from 'react-redux';
 import { getAllColumns } from '../../redux/store';
-
+import ColumnForm from '../ColumnForm/ColumnForm';
+import Column from '../Column/Column';
 
 const List = () => {
 
