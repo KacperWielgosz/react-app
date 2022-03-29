@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
+import { addCard } from '../../redux/store';
 
 const CardForm = props => {
   const dispatch = useDispatch();
@@ -11,9 +12,7 @@ const CardForm = props => {
   const [title, setTitle] = useState('');
   const handleSubmit = e => {
     e.preventDefault();
-    // dlaczego w payload musialem powiedziec, ze columnId to props.columnId
-    // z props nie chcialo dzialac
-    dispatch({type:'ADD_CARD', payload: {title, columnId}})
+    dispatch(addCard({ title, columnId }))
     setTitle('');
   };
 
