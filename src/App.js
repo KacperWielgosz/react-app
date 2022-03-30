@@ -1,15 +1,24 @@
+import { Routes, Route } from 'react-router-dom';
 import Container from './components/Container/Container'
-import Hero from './components/Hero/Hero'
-import SearchForm from './components/SearchForm/SearchForm'
-import List from './components/List/List.js';
+import NavBar from './components/NavBar/NavBar.js';
+import Favorite from './components/Favorite/Favorite.js';
+import About from './components/About/About.js';
+import Home from './components/Home/Home.js';
+import NoMatch from './components/NoMatch/NoMatch.js';
 
 const App = () => {
   return (
-    <Container>
-      <Hero />
-      <SearchForm />
-      <List />
-    </Container>
+    <main>
+      <NavBar />
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </Container>
+ </main>
   );
 };
 export default App;
