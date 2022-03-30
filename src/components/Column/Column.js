@@ -6,7 +6,6 @@ import CardForm from '../CardForm/CardForm'
 
 const Column = props => {
   const cards = useSelector(state => getFilteredCards(state, props.id));
-  console.log('render')
   const template = ' fa fa-'
 
   return (

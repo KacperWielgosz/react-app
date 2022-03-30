@@ -13,7 +13,6 @@ const SearchForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(searchFor(searchString))
-    console.log('serached for', searchString)
     setSearchString('')
   }
 
