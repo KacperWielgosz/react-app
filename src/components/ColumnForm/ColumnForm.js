@@ -2,7 +2,7 @@ import styles from './ColumnForm.module.scss';
 import shortid from 'shortid';
 import { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/store';
+import { addColumn } from '../../redux/columnsRedux';
 import Button from '../Button/Button';
 
 const ColumnForm = props => {
