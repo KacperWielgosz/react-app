@@ -14,7 +14,7 @@ const Card = props => {
     dispatch(toggleCardFavorite(cardId))
   }
 
-  const removeCard = () => {
+  const removesCard = () => {
     dispatch(removeCard(cardId))
   };
 
@@ -24,7 +24,7 @@ const Card = props => {
       <button onClick={addToFavorite} className={clsx(styles.icon, props.isFavorite && styles.isActive)}>
         <span className="fa fa-star-o" ></span>
       </button>
-      <button onClick={removeCard} className={styles.icon}>
+      <button onClick={removesCard} className={styles.icon}>
           <span className='fa fa-trash'></span>
       </button>
     </li>
